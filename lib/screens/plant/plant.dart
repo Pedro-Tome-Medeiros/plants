@@ -29,11 +29,24 @@ class _PlantPageState extends State<PlantPage> {
             child: Container(
               height: 140,
               color: Colors.green,
-              child: Center(
-                  child: Text(
-                widget.plant.name,
-                style: TextStyle(color: Colors.white, fontSize: 24),
-              )),
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                  Center(
+                      child: Text(
+                    widget.plant.name,
+                    style: const TextStyle(color: Colors.white, fontSize: 24),
+                  )),
+                ],
+              ),
             ),
           ),
         ],

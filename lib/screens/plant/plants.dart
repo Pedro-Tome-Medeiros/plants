@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:plants/models/plant.dart';
+import 'package:plants/screens/plant/plant.dart';
 
 class PlantsPage extends StatefulWidget {
   const PlantsPage({Key? key}) : super(key: key);
@@ -39,11 +40,12 @@ class _PlantsPageState extends State<PlantsPage> {
                 itemCount: _items.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () {
-                      const snackBar = SnackBar(content: Text('Tap'));
-
-                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    },
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              PlantPage(plant: _items[index])),
+                    ),
                     child: Card(
                       key: ValueKey(_items[index].id),
                       margin: const EdgeInsets.all(10),
