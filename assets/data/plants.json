@@ -1,0 +1,20 @@
+ [
+    {
+      "id": 1,
+      "name": "PLANTA 1",
+      "description": "Description 1",
+      "qrCode": ""
+    },
+    {
+      "id": 2,
+      "name": "PLANTA 2",
+      "description": "Description 2",
+      "qrCode": ""
+    },
+    {
+      "id": 3,
+      "name": "PLANTA 3",
+      "description": "Description 3",
+      "qrCode": ""
+    }
+  ]
