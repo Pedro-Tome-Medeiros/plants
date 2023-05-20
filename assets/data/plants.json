@@ -3,18 +3,18 @@
       "id": 1,
       "name": "PLANTA 1",
       "description": "Description 1",
-      "qrCode": ""
+      "qrCode": "d642ef40-c936-40f0-91c5-ab3db90b513c"
     },
     {
       "id": 2,
       "name": "PLANTA 2",
       "description": "Description 2",
-      "qrCode": ""
+      "qrCode": "eb0380e0-9d16-48f9-9e7d-b1fea9e00300"
     },
     {
       "id": 3,
       "name": "PLANTA 3",
       "description": "Description 3",
-      "qrCode": ""
+      "qrCode": "f355b5c6-ebfa-41fe-9457-f227ebcb7d79"
     }
   ]
