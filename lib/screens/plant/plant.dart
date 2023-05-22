@@ -15,40 +15,63 @@ class _PlantPageState extends State<PlantPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          ClipPath(
-            clipper: WaveClipperOne(),
-            child: Container(
-              height: 150,
-              color: Colors.lightGreen,
-            ),
-          ),
-          ClipPath(
-            clipper: WaveClipperOne(flip: true),
-            child: Container(
-              height: 140,
-              color: Colors.green,
-              child: Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
+      body: Column(
+        children: [
+          Stack(
+            children: <Widget>[
+              ClipPath(
+                clipper: WaveClipperOne(),
+                child: Container(
+                  height: 150,
+                  color: Colors.lightGreen,
+                ),
+              ),
+              ClipPath(
+                clipper: WaveClipperOne(flip: true),
+                child: Container(
+                  height: 140,
+                  color: Colors.green,
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      Center(
+                          child: Text(
+                        widget.plant.name,
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 24),
+                      )),
+                    ],
                   ),
-                  Center(
-                      child: Text(
-                    widget.plant.name,
-                    style: const TextStyle(color: Colors.white, fontSize: 24),
-                  )),
+                ),
+              ),
+            ],
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset('assets/images/plant.png'),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      widget.plant.description,
+                      style: const TextStyle(height: 2),
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
+          
         ],
       ),
     );

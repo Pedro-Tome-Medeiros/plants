@@ -52,7 +52,11 @@ class _PlantsPageState extends State<PlantsPage> {
                       color: Colors.amber.shade100,
                       child: ListTile(
                         title: Text(_items[index].name),
-                        subtitle: Text(_items[index].description),
+                        subtitle: Text(
+                          _items[index].description,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                        ),
                       ),
                     ),
                   );
